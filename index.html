@@ -1,18 +1,104 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h1>Poptart's Website</h1>
-    <p>All that is gold does not glitter, and not all who wander are lost.</p>
-    <h2>Poptart's Favourite Things:</h2>
-    <ul>
-      <li>websites</li>
-      <li><a href="http://yarn.com">Yarn</a></li>
-      <li>catnip</li>
-      <li>thinkpads</li>
-      <li>film photography</li>
-      <li>cats</li>
-    </ul>
-    <p><a href="http://neocities.org">Check out Neocities!</a></p>
-    <img src="/neocities.png">
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, <initial-scale=1.0">
+    <title>Poptart's Website</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="grid-lines"></div>
+    <!-- <div class="floating-circles" id="floating-circles"></div> -->
+
+    <!-- Header -->
+    <header>
+        <h1 class="site-title">Poptart's Website</h1>
+        <p>Welcome to my website!</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content-container-center">
+        <!-- <h2 class="content-title"></h2> -->
+        <p class="content-text">
+            All that is gold does not glitter, and not all who wander are lost.
+            <br><br>
+        </p>
+        
+        <button class="cyber-button" id="interactive-button">Click for Sparkle!</button>
+    </div>
+    <!-- Content Below Button -->
+    <div class="content-container-left">
+        <p class="content-text">
+        <br>
+        <h2>Poptart's Favourite Things:</h2>
+            <ul>
+                <li>websites</li>
+                <li><a href="test.html">Yarn</a></li>
+                <li>catnip</li>
+                <li>thinkpads</li>
+                <li>film photography</li>
+                <li>cats</li>
+            </ul>
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <!-- <p class="footer-text">Made with 💖 and ☁️ in the digital frontier</p> -->
+        <p><a href="http://neocities.org">Check out Neocities!</a></p>
+        <img src="/neocities.png">
+    </footer>
+
+
+    <script>
+        // Create sparkle effect on button click
+        const interactiveButton = document.getElementById('interactive-button');
+        
+        interactiveButton.addEventListener('click', function() {
+            // Create multiple sparkles at different positions
+            for (let i = 0; i < 5; i++) {
+                createSparkle(interactiveButton);
+            }
+        });
+
+        function createSparkle(button) {
+            const sparkle = document.createElement('div');
+            sparkle.classList.add('sparkle');
+
+            // Select possible emojis for sparkles
+            const emojis = ['✨', '🌟', '💫', '⭐'];
+            const emoji = emojis[Math.round(Math.random() * emojis.length)];
+            sparkle.textContent = emoji;
+
+            // Position sparkle near the button
+            // const rect = button.getBoundingClientRect();
+
+            // Postion sparkle anywhere on page
+            const rect = document.body 
+
+            const x = rect.clientWidth
+            const y = rect.clientHeight
+            
+            const left = Math.floor(Math.random() * x);
+            const top = Math.floor(Math.random() * y);
+            
+            sparkle.style.left = `${left}px`;
+            sparkle.style.top = `${top}px`;
+                
+            document.body.appendChild(sparkle);
+
+            // Trigger animation
+            setTimeout(() => {
+                sparkle.classList.add('show');
+            }, 10);
+            
+            // Remove after animation
+            setTimeout(() => {
+                sparkle.remove();
+            }, 1000);
+            }
+    </script>
+
+</body>
 </html>
