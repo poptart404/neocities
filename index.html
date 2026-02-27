@@ -7,21 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container">
-        <!-- Background Elements -->
-        <div class="grid-lines"></div>
+    <!-- Background Elements -->
+    <div class="grid-lines"></div>
 
-        <!-- Header -->
-        <header>
-            <h1 class="site-title">Poptart's Website</h1>
-            <p>Welcome to my website!</p>
-        </header>
+    <!-- Header -->
+    <header>
+        <h1 class="site-title">Poptart's Website</h1>
+        <p>Welcome to my website!</p>
+    </header>
 
     <!-- Main Content -->
-     <nav id="left-sidebar">
-    <div id="left">
-                <div>
-        <h2>Poptart's Favourite Things:</h2>
+    <div class="row">
+        <div class="column left">
+            <div class="content-text">
+            <h2>Poptart's Favourite Things:</h2>
             <ul>
                 <li>websites</li>
                 <li><a href="test.html">Yarn</a></li>
@@ -30,33 +29,31 @@
                 <li>film photography</li>
                 <li>cats</li>
             </ul>
+            </div>
         </div>
-
-    </div>
-    </nav>
-    <div id="main-content">
-        <!-- <h2 class="content-title"></h2> -->
-        <div class="content-text">
-            <p>
-                All that is gold does not glitter, and not all who wander are lost.
+        <div class="column middle">
+            <div class="content-text">
+                <p>
+                    All that is gold does not glitter, and not all who wander are lost.
+                    <br><br>
+                </p>
+                <button class="cyber-button" id="interactive-button" type="button">Click for Sparkle!</button>
+            </div>
+        </div>
+        <div class="column right">
+            <div class="content-text">
+            <div class="bajablastbox">
+                <p class="bajablasttext">How is Poptart Feeling Today?</p>
+                <br>
+                <img class="bajablastimage" src="misc/image/bajablast.jpeg" width="200">
                 <br><br>
-            </p>
-            <button class="cyber-button" id="interactive-button" type="button">Click for Sparkle!</button>
+                <p class="bajablasttext2">Mountain Dew consumed so far this year: </p><p class="bajablasttext">63</p><p></p>
+                <p class="bajablasttext2">Last Update: February 26th, 2026</p>
+                <p class="bajablasttext">Poptart is not having a Baja Blast.</p>
+            </div>
+        </div>
         </div>
     </div>
-    <nav id="right">
-    <div id="right-sidebar">
-        <div class="bajablastbox">
-            <p class="bajablasttext">How is Poptart Feeling Today?</p>
-            <br>
-            <img class="bajablastimage" src="misc/image/bajablast.jpeg" width="200">
-            <br><br>
-            <p class="bajablasttext2">Mountain Dew consumed so far this year: </p><p class="bajablasttext">63</p><p></p>
-            <p class="bajablasttext2">Last Update: February 26th, 2026</p>
-            <p class="bajablasttext">Poptart is not having a Baja Blast.</p>
-        </div>
-    </div>
-    </nav>
 
     <!-- Footer -->
     <footer>

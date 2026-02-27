@@ -13,9 +13,9 @@
     /* --gradient-bg: linear-gradient(to bottom, rgb(52, 132, 154), rgb(52, 14, 94)), */
 }
 
-.cursor{
+/* cursor{
   cursor: url("/misc/cursor/nyan.cur"), auto !important;
-}
+} */
 
 /* Base Styles */
 * {
@@ -24,6 +24,27 @@
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.left, .right {
+    width: 25%
+}
+
+.middle {
+    width: 50%
+}
+
+/* Clear floats after the columns*/
+.row:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
 
 body {
   background: #1f0037;
@@ -50,18 +71,18 @@ body {
     transform-style: preserve-3d;
     animation: grid-move 30s linear infinite;
 }
-
+/* 
 @keyframes grid-move {
     0% { background-position: 0 0; }
     100% { background-position: 0 40px; }
-}
-
+/* } */
+/*
 @keyframes float {
     0%, 100% { transform: translate(0, 0); }
     25% { transform: translate(50px, 50px); }
     50% { transform: translate(100px, 0); }
     75% { transform: translate(50px, -50px); }
-}
+} */
 
 /* Header Styles */
 header {
@@ -95,13 +116,13 @@ header {
 	margin:10px auto;
 	padding:10px;
 }
-#columns {
+/* #columns {
 	display:flex;
 	flex-wrap:wrap;
-}
+} */
 
 
-#left-sidebar,
+/* #left-sidebar,
 #right-sidebar,
 .main-content {
   display: flex;
@@ -109,9 +130,9 @@ header {
   align-items: center;
   text-align: center;
   padding: 20px;
-}
+} */
 
-#left-sidebar,
+/* #left-sidebar,
 #right-sidebar {
   width: 25%;
   background-color: #7209b7;
@@ -123,9 +144,9 @@ header {
   background-color: #560bad;
   color: rgba(255, 255, 255, 1);
     text-align: center;
-}
+} */
 
-.content-container-center {
+/* .content-container-center {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
@@ -137,7 +158,7 @@ header {
     margin: 40px auto;
     padding: 20px;
     text-align: left;
-}
+} */
 
 .content-title {
     font-size: 2rem;
@@ -284,60 +305,7 @@ footer {
     text-shadow: 0 0 5px var(--neon-blue);
 }
 
-/* Sparkle Effect
-.sparkle {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 3c-4.97 0-9 4.03-9 9h2c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7-7-3.13-7-7c0-2.31 1.25-4.44 3.29-6.04V8.46c0-3.07 2.5-5.57 5.57-5.57 0.33 0 0.65 0.04 0.96 0.11 0.31 0.07 0.61 0.2 0.83 0.34 0.22 0.14 0.39 0.34 0.5 0.55 0.11 0.21 0.16 0.45 0.16 0.71v2.29c-3.78-0.74-7-4.61-7-9C3 7.03 7 3 12 3z'/%3E%3C/svg%3E"); 
-    background-size: contain;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 100;
-}
-
-.sparkle.show {
-    animation: sparkle-animation 1s ease-out forwards;
-}
-
-@keyframes sparkle-animation {
-    0% { transform: scale(0); opacity: 0; }
-    50% { opacity: 1; }
-    100% { transform: scale(1); opacity: 0; }
-} */
-
-        /* body {
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            font-family: 'Arial', sans-serif;
-        } */
-
-        /* .container {
-            text-align: center;
-            position: relative;
-        } */
-
-        /* h1 {
-            color: white;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-            margin-bottom: 20px;
-            font-size: 3rem;
-            letter-spacing: 2px;
-        } */
-
-.sparkle-container {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-}
-
+/* Sparkle Effect */
 .sparkle {
     position: absolute;
     font-size: 1.5rem;
@@ -376,20 +344,6 @@ footer {
     animation-duration: 4.5s;
 }
 
-.sparkle:nth-child(5) {
-    top: 30%;
-    left: 50%;
-    animation-delay: 1.5s;
-    animation-duration: 5.5s;
-}
-
-.sparkle:nth-child(6) {
-    top: 70%;
-    left: 40%;
-    animation-delay: 2.5s;
-    animation-duration: 6.5s;
-}
-
 @keyframes float {
     0%, 100% {
         transform: translateY(0) rotate(0deg);
@@ -402,37 +356,5 @@ footer {
     }
     75% {
         transform: translateY(-15px) rotate(3deg);
-    }
-}
-
-.instructions {
-    color: white;
-    margin-top: 20px;
-    font-size: 1rem;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-}
-
-#left {
-    order:2;
-    margin:0px 0px 10px 0px;
-}
-
-#right {
-    order:3;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .site-title {
-        font-size: 2rem;
-    }
-    
-    .cyberpunk-cute {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .cute-element {
-        margin-bottom: 20px;
     }
 }
