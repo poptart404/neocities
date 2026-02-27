@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, <initial-scale=1.0">
     <title>Poptart's Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Background Elements -->
@@ -45,10 +45,10 @@
             <div class="bajablastbox">
                 <p class="bajablasttext">How is Poptart Feeling Today?</p>
                 <br>
-                <img class="bajablastimage" src="misc/image/bajablast.jpeg" width="200">
+                <img class="bajablastimage" src="image/bajablast.jpeg" width="200">
                 <br><br>
                 <p class="bajablasttext2">Mountain Dew consumed so far this year: </p><p class="bajablasttext">63</p><p></p>
-                <p class="bajablasttext2">Last Update: February 26th, 2026</p>
+                <p class="bajablasttext2">Last Update: </p> <p class="bajablasttext2" id="displayDate"></p>
                 <p class="bajablasttext">Poptart is not having a Baja Blast.</p>
             </div>
         </div>
@@ -59,58 +59,11 @@
     <footer>
         <!-- <p class="footer-text">Made with 💖 and ☁️ in the digital frontier</p> -->
         <p><a href="http://neocities.org">Check out Neocities!</a></p>
-        <img src="misc/image/neocities.png">
+        <img src="image/neocities.png">
     </footer>
 
-
-    <script>
-        // Create sparkle effect on button click
-        const interactiveButton = document.getElementById('interactive-button');
-        
-        interactiveButton.addEventListener('click', function() {
-            // Create multiple sparkles at different positions
-            for (let i = 0; i < 5; i++) {
-                createSparkle(interactiveButton);
-            }
-        });
-
-        function createSparkle(button) {
-            const sparkle = document.createElement('div');
-            sparkle.classList.add('sparkle');
-
-            // Select possible emojis for sparkles
-            const emojis = ['✨', '🌟', '💫', '⭐'];
-            const emoji = emojis[Math.round(Math.random() * emojis.length)];
-            sparkle.textContent = emoji;
-
-            // Position sparkle near the button
-            // const rect = button.getBoundingClientRect();
-
-            // Postion sparkle anywhere on page
-            const rect = document.body 
-
-            const x = rect.clientWidth
-            const y = rect.clientHeight
-            
-            const left = Math.floor(Math.random() * x);
-            const top = Math.floor(Math.random() * y);
-            
-            sparkle.style.left = `${left}px`;
-            sparkle.style.top = `${top}px`;
-                
-            document.body.appendChild(sparkle);
-
-            // Trigger animation
-            setTimeout(() => {
-                sparkle.classList.add('show');
-            }, 10);
-            
-            // Remove after animation
-            setTimeout(() => {
-                sparkle.remove();
-            }, 3000);
-            }
-    </script>
-</div>
+    <!-- Load scripts at the end of the body -->
+    <script src="js/sparkles.js" defer></script>
+    <script src="js/bajablast.js" defer></script>
 </body>
 </html>
