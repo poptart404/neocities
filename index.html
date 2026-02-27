@@ -4,33 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, <initial-scale=1.0">
     <title>Poptart's Website</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Background Elements -->
-    <div class="grid-lines"></div>
-    <!-- <div class="floating-circles" id="floating-circles"></div> -->
+    <div id="container">
+        <!-- Background Elements -->
+        <div class="grid-lines"></div>
 
-    <!-- Header -->
-    <header>
-        <h1 class="site-title">Poptart's Website</h1>
-        <p>Welcome to my website!</p>
-    </header>
+        <!-- Header -->
+        <header>
+            <h1 class="site-title">Poptart's Website</h1>
+            <p>Welcome to my website!</p>
+        </header>
 
     <!-- Main Content -->
-    <div class="content-container-center">
-        <!-- <h2 class="content-title"></h2> -->
-        <p class="content-text">
-            All that is gold does not glitter, and not all who wander are lost.
-            <br><br>
-        </p>
-        
-        <button class="cyber-button" id="interactive-button">Click for Sparkle!</button>
-    </div>
-    <!-- Content Below Button -->
-    <div class="content-container-left">
-        <p class="content-text">
-        <br>
+     <nav id="left-sidebar">
+    <div id="left">
+                <div>
         <h2>Poptart's Favourite Things:</h2>
             <ul>
                 <li>websites</li>
@@ -40,8 +30,33 @@
                 <li>film photography</li>
                 <li>cats</li>
             </ul>
-        </p>
+        </div>
+
     </div>
+    </nav>
+    <div id="main-content">
+        <!-- <h2 class="content-title"></h2> -->
+        <div class="content-text">
+            <p>
+                All that is gold does not glitter, and not all who wander are lost.
+                <br><br>
+            </p>
+            <button class="cyber-button" id="interactive-button" type="button">Click for Sparkle!</button>
+        </div>
+    </div>
+    <nav id="right">
+    <div id="right-sidebar">
+        <div class="bajablastbox">
+            <p class="bajablasttext">How is Poptart Feeling Today?</p>
+            <br>
+            <img class="bajablastimage" src="misc/image/bajablast.jpeg" width="200">
+            <br><br>
+            <p class="bajablasttext2">Mountain Dew consumed so far this year: </p><p class="bajablasttext">63</p><p></p>
+            <p class="bajablasttext2">Last Update: February 26th, 2026</p>
+            <p class="bajablasttext">Poptart is not having a Baja Blast.</p>
+        </div>
+    </div>
+    </nav>
 
     <!-- Footer -->
     <footer>
@@ -96,9 +111,9 @@
             // Remove after animation
             setTimeout(() => {
                 sparkle.remove();
-            }, 5000);
+            }, 3000);
             }
     </script>
-
+</div>
 </body>
 </html>

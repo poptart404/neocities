@@ -13,6 +13,10 @@
     /* --gradient-bg: linear-gradient(to bottom, rgb(52, 132, 154), rgb(52, 14, 94)), */
 }
 
+.cursor{
+  cursor: url("/misc/cursor/nyan.cur"), auto !important;
+}
+
 /* Base Styles */
 * {
     margin: 0;
@@ -86,6 +90,41 @@ header {
 }
 
 /* Main Content Styles */
+#container {
+	max-width:750px;
+	margin:10px auto;
+	padding:10px;
+}
+#columns {
+	display:flex;
+	flex-wrap:wrap;
+}
+
+
+#left-sidebar,
+#right-sidebar,
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+#left-sidebar,
+#right-sidebar {
+  width: 25%;
+  background-color: #7209b7;
+}
+
+.main-content {
+  position: relative;
+  width: 50%;
+  background-color: #560bad;
+  color: rgba(255, 255, 255, 1);
+    text-align: center;
+}
+
 .content-container-center {
     max-width: 800px;
     margin: 40px auto;
@@ -118,7 +157,7 @@ header {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 30px;
-    /* text-align: center; */
+    text-align: center;
 }
 
 /* .content-text {
@@ -127,6 +166,65 @@ header {
     margin-bottom: 30px;
     text-align: left;
 } */
+
+/* Baja Blast */
+.bajablastbox {
+    width: 200px;
+    height: auto;
+    border: 1px solid white;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 3px 3px 2px 0px rgb(9, 187, 214);
+    background-color: #ffffff;
+}
+
+.bajablasttext{
+    background: #2c96ac;
+    background: linear-gradient(to right, #00a9cf 0%, #bfbfbf 100%);
+    background-clip: border-box;
+        -webkit-background-clip: text;
+    background-clip: text;
+        -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "cabin";
+}
+
+.bajablastimage{
+    width: 80px;
+    height: auto;
+    overflow: hidden;
+    animation: spin 3s linear infinite;
+    transition-duration: 0.8s;
+    transition-property: transform;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.bajablastimage {
+  width: 80px;
+  height: auto;
+  overflow: hidden;
+  animation: spin 3s linear infinite;
+}
+.bajablasttext2{
+    background: #2c96ac;
+    background: linear-gradient(to right, #00a9cf 0%, #bfbfbf 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "cabin";
+}
+
 
 /* Interactive Buttons */
 .cyber-button {
@@ -138,7 +236,7 @@ header {
     font-size: 1rem;
     text-transform: uppercase;
     cursor: pointer;
-    position: relative;
+    position: center;
     overflow: hidden;
     animation: button-glow 3s infinite alternate;
     transition: all 0.3s;
@@ -312,6 +410,15 @@ footer {
     margin-top: 20px;
     font-size: 1rem;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+#left {
+    order:2;
+    margin:0px 0px 10px 0px;
+}
+
+#right {
+    order:3;
 }
 
 /* Responsive Design */
