@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, <initial-scale=1.0">
     <title>Poptart's Website</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/image/bajablast.png">
 </head>
 <body>
     <!-- Background Elements -->
@@ -13,7 +14,7 @@
     <!-- Header -->
     <header>
         <h1 class="site-title">Poptart's Website</h1>
-        <p>Welcome to my website!</p>
+        <p>All that is gold does not glitter, and not all those who wander are lost.</p>
     </header>
 
     <!-- Main Content -->
@@ -38,7 +39,6 @@
         <div class="column middle">
             <div class="content-text">
                 <p>
-                    All that is gold does not glitter, and not all who wander are lost.
                     <br><br>
                 </p>
                 <button class="big-button" id="interactive-button" type="button">Click for Sparkle!</button>
@@ -51,10 +51,11 @@
                 <em><p class="bajablasttext" id="isBlast"></p></em>
                 <br>
                 <button class="smol-button" id="interactive-button" type="button">feed poptart a baja blast</button>
-                <br><br>
-                <img class="bajablastcat" id="blastImg" src="image/poptart.png" width="200">
-                <p class="bajablasttext2">Mountain Dew consumed so far this year: </p><strong><p class="bajablasttext" id="daysYear"></p></strong>
+                <br>
                 <img class="bajablastimage" src="image/bajablast.png" width="200">
+                <br>
+                <img class="bajablastcat" id="blastImg" src="image/feedMe.gif" width="200">
+                <p class="bajablasttext2">Mountain Dew consumed so far this year: </p><strong><p class="bajablasttext" id="counter"></p></strong>
                 <p class="bajablasttext2">Last Update: </p> <p class="bajablasttext2" id="displayDate"></p>
             </div>
         </div>
@@ -63,7 +64,7 @@
 
     <!-- Footer -->
     <footer>
-        <!-- <p class="footer-text">Made with 💖 and ☁️ in the digital frontier</p> -->
+        <p>You are visitor # <span id="hitcount"></span></p>
         <p><a href="http://neocities.org">Check out Neocities!</a></p>
         <img src="image/neocities.png">
     </footer>
@@ -72,5 +73,6 @@
     <script src="js/helpers.js" defer></script>
     <script src="js/sparkles.js" defer></script>
     <script src="js/bajablast.js" defer></script>
+    <script src="js/visitcount.js" defer></script>
 </body>
 </html>

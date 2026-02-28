@@ -13,13 +13,14 @@
     dayCount = daysPassed(today,yearStart);
 
     // Return Variables to HTML
-    document.getElementById("daysYear").textContent = dayCount;
+    // document.getElementById("daysYear").textContent = dayCount;
 
-    
+
+
 // Is Poptart having a baja blast?
     const state = Math.round(Math.random());
     let blast = "Poptart is experiencing Schrodinger's Baja Blast, please stand by.";
-    let blastImg = "/image/neocities.gif";
+    let blastImg = "/image/poptart.png";
     if (state == 0) {
         blast = "Poptart is not having a Baja Blast";
         blastImg = "/image/baja-sad-cat.gif";
@@ -31,7 +32,7 @@
     }
     else {
         blast = "Poptart is experiencing Schrodinger's Baja Blast, please stand by.";
-        blastImg = "/image/neocities.gif";
+        blastImg = "/image/poptart.png";
     }
 
     // Return Variables to HTML
@@ -39,3 +40,39 @@
     const blastElement = document.getElementById("blastImg");
     blastElement.src = blastImg;
 
+// Feed Baja Blast Function
+const smolButton = document.getElementById('interactive-button');
+
+interactiveButton.addEventListener('click', function() {
+    feedBajaBlast(smolButton);
+});
+
+function feedBajaBlast(){
+    addNumber = addNumber +1 
+    localStorage.setItem('counter', addNumber);
+}
+
+// function feedBajaBlast() {
+//     // const bajaCount = document.createElement('div');
+//     // bajaCount.classList.add('bajaCount');
+
+//     // const increment = document.getElementById('increment')
+//     let counter = document.getElementById('counter')
+
+//     increment.addEventListener('click', () => {
+//     increment.disabled = false
+
+//     fetch('./increment.php')
+//         .then(response => response.text())
+//         .then(count => {
+//         counter.textContent = count
+//         })
+//         .catch(error => {
+//         counter.textContent = error
+//         })
+//         .finally(() => {
+//         increment.disabled = false
+//         })
+//     })
+    
+    // }
