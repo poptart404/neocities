@@ -1,6 +1,6 @@
 # poptart.dev neocities site
 
-My contribution to the growing indie web. Many thanks to [onio.club](https://onio.club/)'s [youtube video](https://www.youtube.com/watch?v=tkUgOT22F5s) which introduced me to this community!
+My contribution to the growing indie web. Many thanks to [onio.neocities.org](https://onio.neocities.org)'s [youtube video](https://www.youtube.com/watch?v=tkUgOT22F5s) which introduced me to this community!
 
 As I build this site I'll try to include all of the resources I use and learn from below:
 
