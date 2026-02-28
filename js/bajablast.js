@@ -15,6 +15,7 @@
     // Return Variables to HTML
     document.getElementById("daysYear").textContent = dayCount;
 
+    
 // Is Poptart having a baja blast?
     const state = Math.round(Math.random());
     let blast = "Poptart is experiencing Schrodinger's Baja Blast, please stand by.";
@@ -33,24 +34,8 @@
         blastImg = "/image/neocities.gif";
     }
 
-    // blastImg = "/image/baja-sad-cat.gif";
-
-
     // Return Variables to HTML
     document.getElementById("isBlast").textContent = blast;
     const blastElement = document.getElementById("blastImg");
     blastElement.src = blastImg;
-    // .textContent = blastImg;
-    // isBlastImg.src = blastImg;
-
-
-// //     // 1. Define the new image source URL
-// // const newImgSrc = "images/landscape.jpg";
-
-// // 2. Get the image element by its ID
-// // const imageElement = document.getElementById("myImage");
-
-// // 3. Set the src property to the new source
-// imageElement.src = newImgSrc; //
-
 

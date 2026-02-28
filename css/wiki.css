@@ -1,0 +1,131 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+/* CSS Variables for easy color customization */
+:root {
+    --neon-pink: #ff6ec7;
+    --neon-purple: #8a2be2;
+    --neon-blue: #00bfff;
+    --dark-bg: #1d1d45;
+    --grid-color: rgba(0, 200, 255, 0.1);
+    --text-color: #ffffff;
+    /* --gradient-bg: linear-gradient(to bottom, rgb(52, 132, 154), rgb(52, 14, 94)), */
+}
+
+/* unvisited link */
+a:link {
+  color: rgb(21, 0, 80);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(56, 0, 70);
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Configure 3 Columns */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.left {
+    width: 20%
+}
+
+.main {
+    width: 80%
+}
+
+/* Clear floats after the columns*/
+.row:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+
+/* Background Color */
+body {
+  background: #1f0037;
+  background: linear-gradient(0deg,rgb(46, 12, 34) 0%, rgb(50, 29, 69) 50%, rgb(18, 21, 60) 100%);
+  color: var(--text-color);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  cursor: url("/cursor/nyan.cur"), auto !important;
+}
+
+/* Header Styles */
+header {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 200, 255, 0.3);
+}
+
+.content-heading {
+    text-align: center;
+}
+
+.content-text {
+    text-align: left;
+}
+
+.no-bullets {
+    list-style-type: none; /* Removes bullets/numbers */
+    margin: 0;            /* Removes default margins */
+    padding: 0;           /* Removes default padding (indentation) */
+    text-align: left;
+}
+
+.sidebar {
+    width: 80%;
+    height: auto;
+    /* align: center; */
+    border: 1px solid rgb(255, 0, 111);
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 3px 3px 2px 0px rgb(9, 187, 214);
+    background-color: #ff167b98;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    /* margin-bottom: 30px; */
+    text-align: center;
+}
+
+.site-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 
+        0 0 5px var(--neon-blue),
+        0 0 10px var(--neon-blue),
+        0 0 15px var(--neon-blue),
+        0 0 20px var(--neon-purple);
+}
+
+@keyframes title-glow {
+    0% { text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 15px var(--neon-blue), 0 0 20px var(--neon-purple); }
+    100% { text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue), 0 0 40px var(--neon-purple); }
+}

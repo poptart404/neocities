@@ -13,10 +13,6 @@
     /* --gradient-bg: linear-gradient(to bottom, rgb(52, 132, 154), rgb(52, 14, 94)), */
 }
 
-/* cursor{
-  cursor: url("/misc/cursor/nyan.cur"), auto !important;
-} */
-
 /* Base Styles */
 * {
     margin: 0;
@@ -54,6 +50,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
+  cursor: url("/cursor/nyan.cur"), auto !important;
 }
 
 /* Background Elements */
@@ -231,6 +228,50 @@ header {
 }
 
 .big-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 200, 255, 0.4), transparent);
+    /* animation: scan 3s linear infinite; */
+}
+
+@keyframes scan {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Smol Button */
+.smol-button {
+    padding: 10px 10px;
+    background: var(--neon-pink);
+    color: var(--dark-bg);
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 20px var(--neon-pink);
+    border-radius: 5px;
+    font-size: 12pt;
+    text-decoration-color: var(--dark-bg);
+    text-transform: uppercase;
+    cursor: pointer;
+    position: center;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+@keyframes smol-button-glow {
+    0% { box-shadow: 0 0 5px var(--neon-blue); }
+    100% { box-shadow: 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue); }
+}
+
+.smol-button:hover {
+    background-color: var(--neon-pink);
+    box-shadow: 0 0 15px var(--neon-blue);
+    transform: translateY(-2px);
+}
+
+.smol-button::before {
     content: '';
     position: absolute;
     top: 0;
