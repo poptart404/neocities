@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, <initial-scale=1.0">
+    <title>Poptart's Wiki</title>
+    <link rel="stylesheet" href="/css/wiki.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="site-title">Poptart's Wiki</h1>
+    </header>
+    <div class="row">
+        <div class="column left">
+            <div class="sidebar">
+                <div id="include-here"></div>
+
+                <script>
+                fetch('sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('include-here').innerHTML = data;
+                });
+                </script>
+            </div>
+        </div>
+        <div class="column main">
+             <h1>Title Goes Here</h1>
+             <p>Some introductary text.</p><br>
+             <h2>A smaller heading</h2>
+             <p>More text, so on and so forth.</p>
+        </div>
+    </div>
+</body>        
+</html>

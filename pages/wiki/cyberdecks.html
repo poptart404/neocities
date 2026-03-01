@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, <initial-scale=1.0">
+    <title>Poptart's Wiki</title>
+    <link rel="stylesheet" href="/css/wiki.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="site-title">Poptart's Wiki</h1>
+    </header>
+    <div class="row">
+        <div class="column left">
+            <div class="sidebar">
+                <div id="include-here"></div>
+
+                <script>
+                fetch('sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('include-here').innerHTML = data;
+                });
+                </script>
+            </div>
+        </div>
+        <div class="column main">
+            <h1>Building A Cyberdeck</h1><br><br>
+            <h2>Background</h2><br>
+            <p>I'm mainly fascinated with cyberdecks as someone who grew up in the age of cell phones with physical qwerty keyboards. I had one of those little LG phones that when rotated to a landscape orientation would slide out a small keyboard for typing messages to friends. If I remember correctly the iPhone had already been released by this time but was still prohibitively expensive for most, especially for high school or college students.</p><br>
+            <p>The keyboard itself had its issues, it was very short with the top row of keys right up against the edge of the top part of the case, making those keys sometimes tough to press accurately. But it was miles better than the touchscreen keybaord I had a few years later on my first smartphone, an iPhone 4S.</p><br>
+            <h2>Goals</h2><br>
+            <p></p><br>
+            <h2>Inspiration Links I've Collected so Far</h2><br>
+            <p><ul class="no-bullets">
+            <li>https://www.clockworkpi.com/</li>
+            <li>https://beepy.sqfmi.com/</li>
+            <li>https://hackaday.com/2023/09/07/2023-cyberdeck-challenge-the-best-decks-on-the-net/</li>
+            <li>https://hackaday.com/tag/2022-cyberdeck-contest/</li>
+            <li>https://hackaday.io/project/204382-decktility</li>
+            <li>https://github.com/samcervantes/bumble-berry-pi</li>
+            <li>https://hackaday.io/project/202522-cyberdeck-handheld</li>
+            <li>https://github.com/ZitaoTech/Hackberry-Pi_Zero</li>
+            <li>https://www.codeof.me/cyberdore-2064-your-cyberdeck-companion-for/</li>
+            <li>https://www.instructables.com/T3rminal-3d-Printed-CyberdeckMobile-PC/</li>
+            <li>https://ralsina.me/weblog/posts/so-i-built-a-laptop.html</li>
+            <li>https://github.com/ashtf8/PocketMage_PDA</li>
+            <li>https://hackaday.com/2025/01/18/a-pda-from-an-esp32/</li>
+            <li>https://www.instructables.com/Hard-Case-Cyber-Deck-Raspberry-Pi-Touch-Screen/</li>
+            <li>https://www.digikey.com/en/maker/projects/how-to-build-your-own-raspberry-pi-cyberdeck/f4a94ae192d147b8b6abe9cc4557dbab</li>
+            <li>https://www.instructables.com/Touch-Type-and-Sketch-on-the-Go-With-KeyMo/</li>
+            </ul></p>
+        </div>
+    </div>
+</body>        
+</html>
+
