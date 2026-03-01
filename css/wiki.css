@@ -15,12 +15,12 @@
 
 /* unvisited link */
 a:link {
-  color: rgb(21, 0, 80);
+  color: rgb(53, 228, 255);
 }
 
 /* visited link */
 a:visited {
-  color: rgb(56, 0, 70);
+  color: rgb(53, 228, 255);
 }
 
 /* mouse over link */
@@ -95,9 +95,14 @@ header {
     font-size: 18px;
 }
 
+.side-heading2 {
+    text-align: center;
+    font-size: 16px;
+}
+
 .side-text {
     text-align: left;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .no-bullets {
@@ -105,7 +110,7 @@ header {
     margin: 0;            /* Removes default margins */
     padding: 0;           /* Removes default padding (indentation) */
     text-align: left;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .sidebar {
