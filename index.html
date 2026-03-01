@@ -39,7 +39,9 @@
         <div class="column middle">
             <div class="content-text">
                 <p>
-                    <br><br>
+                <br>    
+
+                <br>
                 </p>
                 <button class="big-button" id="interactive-button" type="button">Click for Sparkle!</button>
             </div>
@@ -49,14 +51,14 @@
             <div class="sidebox">
                 <strong><p class="bajablasttext">How is Poptart Feeling Today?</p></strong>
                 <em><p class="bajablasttext" id="isBlast"></p></em>
+                <img class="bajablastcat" id="blastImg" src="image/feedMe.gif" width="200">
+                <button onclick="clickCounter()" class="smol-button" type="button">feed poptart a baja blast</button>
                 <br>
-                <button class="smol-button" id="interactive-button" type="button">feed poptart a baja blast</button>
+                <p class="bajablasttext2">you have fed poptart</p><strong><p id="result"></p></strong><p class="bajablasttext2">baja blasts this year ❤️</p>
                 <br>
                 <img class="bajablastimage" src="image/bajablast.png" width="200">
                 <br>
-                <img class="bajablastcat" id="blastImg" src="image/feedMe.gif" width="200">
-                <p class="bajablasttext2">Mountain Dew consumed so far this year: </p><strong><p class="bajablasttext" id="counter"></p></strong>
-                <p class="bajablasttext2">Last Update: </p> <p class="bajablasttext2" id="displayDate"></p>
+                <!-- <p class="bajablasttext2">Last Update: </p> <p class="bajablasttext2" id="displayDate"></p> -->
             </div>
         </div>
         </div>
@@ -64,7 +66,9 @@
 
     <!-- Footer -->
     <footer>
-        <p>You are visitor # <span id="hitcount"></span></p>
+        <p>You are visitor # <span id="hitcount"></span>
+            <br>
+        Last Updated: <span id="lastupdate"></span></p>
         <p><a href="http://neocities.org">Check out Neocities!</a></p>
         <img src="image/neocities.png">
     </footer>
