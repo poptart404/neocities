@@ -12,22 +12,23 @@
     <header>
         <h1 class="site-title">Poptart's Chronic Illness Pokedex</h1>
     </header>
-    <div class="main">
+    <div class="column left">
         <div class="music">
-        <audio id="audio" src="music.mp4"></audio>
-        <a onClick="togglePlay()"><img src="pokeball.gif"></a>
-
+            <audio id="audio" src="music.mp4"></audio>
+            <a onClick="togglePlay()"><img src="pokeball.gif"></a>
         </div>
-        <div id="include-here"></div>
-        <script>
-            fetch('pokedex.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('include-here').innerHTML = data;
-            });
-        </script>
-        <script src="pokedexMusic.js" defer></script>
-    <!-- </div> -->
+    </div>
+        <div class="column main">
+            <div id="include-here"></div>
+            <script>
+                fetch('pokedex.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('include-here').innerHTML = data;
+                });
+            </script>
+            <script src="pokedexMusic.js" defer></script>
+        </div>
 </body>        
 </html>
 

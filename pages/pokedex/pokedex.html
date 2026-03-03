@@ -80,10 +80,21 @@ https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with
   </div>
   <div id="right">
     <div id="stats">
-      <strong>Name:</strong> Psyduck<br/>
-      <strong>Type:</strong> Water<br/>
-      <strong>Height:</strong> 2'072''<br/>
-      <strong>Weight:</strong> 43.2 lbs.<br/><br/>
+      <button type="button" onclick="loadDoc()">Get Info</button>
+      <br/>
+      <strong>Name: </strong><p id="name"></p>
+      <table id="name"></table>
+      
+      <!-- <script>
+                fetch('data.xml')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('include-here').innerHTML = data;
+                });
+            </script><br/> -->
+      <strong>Type: </strong> Water<br/>
+      <strong>Height: </strong> 2'072''<br/>
+      <strong>Weight: </strong> 43.2 lbs.<br/><br/>
       <strong>The duck Pokemon</strong><br/>
       Uses mysterious powers to perform various attacks.
     </div>
@@ -114,5 +125,31 @@ https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with
     <!-- <div id="curve3_right"></div> -->
   </div>
 </div>
+
+<script>
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    myFunction(this);
+  }
+  xhttp.open("GET", "data.xml");
+  xhttp.send();
+}
+function myFunction(xml) {
+  const xmlDoc = xml.responseXML;
+  const x = xmlDoc.getElementsByTagName("ITEM");
+  let table="<tr><th>Name</th><th>Type</th></tr>";
+  for (let i = 0; i <x.length; i++) {
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("FOUND")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("name").innerHTML = table;
+}
+</script>
+
 </body>
+
 </html>
