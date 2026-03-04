@@ -77,8 +77,6 @@ https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with
 		/* background: var(--main-shadow-color); */
 	}
 
-
-
 	/* //// LEFT PART //// */
 
 	div#curve1_left
@@ -677,6 +675,44 @@ https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with
 		background: #0530e5;	
 		box-shadow: -1px 2px #001c91;
 	}
+
+	div.blueButtonLong
+	{
+		height: 35px;
+		width : 253px;
+		background-color: #003300;
+		float: left;
+		margin-right: 7px;
+		appearance: none;
+		outline: none;
+		cursor: pointer;
+		border-radius: 10px;
+
+		background: #0530e5;	
+		box-shadow: -1px 2px #001c91;
+		font-size: 14px;
+		color: #ffffff;
+	}
+
+
+	/* select {
+		height: 35px;
+		width : 253px;
+		background-color: transparent;
+		appearance: none;
+		outline: none;
+		cursor: pointer;
+		background: transparent;	
+		/* box-shadow: -1px 2px #001c91; */
+		/* border: 1px solid #ccc; */
+		/* float: left; */
+		/* margin-right: 7px; */
+
+		/* border-radius: 10px; */
+		/* padding: 10px; */
+		/* font-size: 14px;
+		color: #ffffff;
+	} */ 
 
 	div#barbutton3
 	{
