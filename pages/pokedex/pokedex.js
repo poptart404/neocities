@@ -22,44 +22,74 @@ xmlhttpItem.send();
 
 
 
-/* When the user selects an option, update the display fields for that item */
-function myFunction() {
-  document.getElementById("myDropdown").classList.replace();// toggle("show");
-}
+// /* When the user selects an option, update the display fields for that item */
+// function myFunction() {
+//   document.getElementById("myDropdown").classList.replace();// toggle("show");
+// }
 
-// Close the dropdown if the user clicks outside of it
-window.onselectionchange = function(e) {
-  if (!e.target.matches('.blueButtons1')) {
-    updateScreen(); 
-    console.log(itemID);
+// // Close the dropdown if the user clicks outside of it
+// window.onselectionchange = function(e) {
+//   if (!e.target.matches('.blueButtons1')) {
+//     updateScreen(); 
+//     console.log(itemID);
 
-    // document.getElementById("demoID").innerHTML = x;
-    // var myDropdown = document.getElementById("myDropdown");
-    //     if (myDropdown.classList.contains('show')) {
-    //       myDropdown.classList.remove('show');
-    //   }
-  }
-}
+//     // document.getElementById("demoID").innerHTML = x;
+//     // var myDropdown = document.getElementById("myDropdown");
+//     //     if (myDropdown.classList.contains('show')) {
+//     //       myDropdown.classList.remove('show');
+//     //   }
+//   }
+// }
 
-    function loadDetails() {
-      const xmlhttpDetails = new XMLHttpRequest();
-      const myItem = JSON.parse(this.responseText);
-      // let textName = myObj[itemID].name;
-      // let textFound = myObj[itemID].found;
-      // let textSize = myObj[itemID].size;
-      // let textURL = myObj[itemID].url;
 
-      let textName = myItem[0].name;
-      let textFound = myItem[0].found;
-      let textSize = myItem[0].size;
-      let textURL = myItem[0].url;
+document.getElementById("clickMe").onclick = loadDetails();
 
-      document.getElementById("itemName").innerHTML = textName;
-      document.getElementById("itemFound").innerHTML = textFound;
-      document.getElementById("itemSize").innerHTML = textSize;
-      document.getElementById("itemURL").innerHTML = textURL;
+function loadDetails() {
+    const xmlhttpDetails = new XMLHttpRequest();
+    const myItem = JSON.parse(this.responseText);
+    // let textName = myObj[itemID].name;
+    // let textFound = myObj[itemID].found;
+    // let textSize = myObj[itemID].size;
+    // let textURL = myObj[itemID].url;
 
-      // console.log(itemID);
-      xmlhttpDetails.open("GET", "data.json", true);
-      xmlhttpDetails.send();
-      }//}
+    let textName = myItem[0].name;
+    let textFound = myItem[0].found;
+    let textSize = myItem[0].size;
+    let textURL = myItem[0].url;
+
+    document.getElementById("itemName").innerHTML = textName;
+    document.getElementById("itemFound").innerHTML = textFound;
+    document.getElementById("itemSize").innerHTML = textSize;
+    document.getElementById("itemURL").innerHTML = textURL;
+
+    // console.log(itemID);
+    xmlhttpDetails.open("GET", "data.json", true);
+    xmlhttpDetails.send();
+   }//}
+
+// document.querySelector('.button2').addEventListener('click', function() {
+//     // Your JavaScript function code here
+//   // function loadDetails() {
+//     const xmlhttpDetails = new XMLHttpRequest();
+//     const myItem = JSON.parse(this.responseText);
+//     // let textName = myObj[itemID].name;
+//     // let textFound = myObj[itemID].found;
+//     // let textSize = myObj[itemID].size;
+//     // let textURL = myObj[itemID].url;
+
+//     let textName = myItem[0].name;
+//     let textFound = myItem[0].found;
+//     let textSize = myItem[0].size;
+//     let textURL = myItem[0].url;
+
+//     document.getElementById("itemName").innerHTML = textName;
+//     document.getElementById("itemFound").innerHTML = textFound;
+//     document.getElementById("itemSize").innerHTML = textSize;
+//     document.getElementById("itemURL").innerHTML = textURL;
+
+//     // console.log(itemID);
+//     xmlhttpDetails.open("GET", "data.json", true);
+//     xmlhttpDetails.send();
+//   // }//}
+// alert('Button clicked!');
+// });
