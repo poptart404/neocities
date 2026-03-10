@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, <initial-scale=1.0">
+    <title>Poptart's Wiki</title>
+    <link rel="stylesheet" href="/css/wiki.css">
+    <link rel="icon" type="image/x-icon" href="/image/bajablast.png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="site-title">Poptart's Wiki</h1>
+    </header>
+    <div class="row">
+        <div class="column left">
+            <div class="sidebar">
+                <div id="include-here"></div>
+
+                <script>
+                fetch('sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('include-here').innerHTML = data;
+                });
+                </script>
+            </div>
+        </div>
+        <div class="column main">
+             <h1>Chronic Illness</h1>
+             <p>I am someone who has lived with a medley of chronic illnesses since their teen years. I've pieced together a lot of knowledge during that time and will use this space to share some of the resoures I have found helpful. I've included pages for various conditions/groups of symptoms where appropriate.</p><br>
+             <h2>By Topic</h2>
+             <a href="POTS.html">POTS</a>
+             <a href="sleep.html">Sleep</a>
+        </div>
+    </div>
+</body>        
+</html>

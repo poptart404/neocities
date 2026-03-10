@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, <initial-scale=1.0">
+    <title>Poptart's Wiki</title>
+    <link rel="stylesheet" href="/css/wiki.css">
+    <link rel="icon" type="image/x-icon" href="/image/bajablast.png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="site-title">Poptart's Wiki</h1>
+    </header>
+    <div class="row">
+        <div class="column left">
+            <div class="sidebar">
+                <div id="include-here"></div>
+
+                <script>
+                fetch('sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('include-here').innerHTML = data;
+                });
+                </script>
+            </div>
+        </div>
+        <div class="column main">
+             <h2>Postural Orthostatic Tachycardia Syndrome (POTS)</h2>
+             <p>More text, so on and so forth.</p>
+             https://www.reddit.com/r/POTS/comments/118n3ep/the_pots_pharmacopeia_medications_for_postural/
+             https://www.bcwomens.ca/Specialized-Services-Site/Documents/Complex%20Chronic%20Diseases%20%28CCDP%29/Clinical%20Protocol-POTS.pdf
+        </div>
+    </div>
+</body>        
+</html>

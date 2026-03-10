@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, <initial-scale=1.0">
+    <title>Poptart's Wiki</title>
+    <link rel="stylesheet" href="/css/wiki.css">
+    <link rel="icon" type="image/x-icon" href="/image/bajablast.png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="site-title">Poptart's Wiki</h1>
+    </header>
+    <div class="row">
+        <div class="column left">
+            <div class="sidebar">
+                <div id="include-here"></div>
+
+                <script>
+                fetch('sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('include-here').innerHTML = data;
+                });
+                </script>
+            </div>
+        </div>
+        <div class="column main">
+             <h2>Sleep Disturbances</h2>
+             <p>More text, so on and so forth.</p>
+             https://www.bcwomens.ca/Specialized-Services-Site/Documents/Complex%20Chronic%20Diseases%20(CCDP)/Clinical%20Protocol-Sleep.pdf
+        </div>
+    </div>
+</body>        
+</html>
