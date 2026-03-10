@@ -1,3 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, <initial-scale=1.0">
+    <title>Poptart's Wiki</title>
+    <link rel="stylesheet" href="/css/wiki.css">
+    <link rel="icon" type="image/x-icon" href="/image/bajablast.png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="site-title">Poptart's Wiki</h1>
+    </header>
+    <div class="row">
+        <div class="column left">
+            <div class="sidebar">
+                <div id="include-here"></div>
+
+                <script>
+                fetch('sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('include-here').innerHTML = data;
+                });
+                </script>
+            </div>
+        </div>
+        <div class="column main">
+        <h2>My History with Computers and How I Got Interested in Thinkpads</h2>
+        <p>I grew up learning how to build and maintain a computer in the 90's and early 00's, mainly old Dell and HP desktops out of old parts that my Dad was able to find on eBay or at computer shows. Things like basic BIOS setup and the Windows Control Panel in Windows 95, 98, and XP were familiar to me. When Dad was out of town for work and there was a problem with the family computer, I was usually the one who could diagnose the issue and get it running again.<p>
+        <p>In middle school I got my first laptop - a 5-ish year old business class laptop that an uncle had saved from his company's e-waste bin. I think it was a Dell, but I'm not 100% sure these days. It was probably a model from somewhere in the 1998 to 2002 range. The wireless card didn't work, and I think it only had a modem port, no ethernet. He put a fresh hard drive in it for me and off I went, armed with an ethernet PCMCIA card and later a USB wireless card. It ran best on Windows 2000 and couldn't handle XP, but was hilariously unstable even without my meddling in the OS, so I did a fresh re-install every 6 months or so. Because the driver for the USB wireless card had to be installed once the OS was up and running, I would end up spending an evening in the basement where the router sat up on a shelf, hanging out in a folding camp chair with an ethernet cable running from the laptop up to the router. It wasn't the most efficient, but it worked well enough and the computer was able to handle AIM and the occasional paper for school</p>
+        <p>By high school I was able to save up enough between Christmas gifts and a part time job to buy my first new computer - a Dell Inspiron 1501 from the Dell Refurbished website a few days after Christmas. I think at the time it cost around $580 and even in hindsight it was worth every penny. I was particularly proud of myself at the time because Windows Vista had just come out, but becuase it was a refurbished model it just happened to have been shipped with Windows XP and had the "ready for Windows Vista" sticker on it. I very happily did not upgrade, having seen my neighbor's family computer already upgrading and having nothing but trouble.</p>
+        <p>I usually think of this as the first computer I really learned how to tinker with. I was running World of Warcraft (Burning Crusade of course) and having a blast finally having hardware that was up to date. After a few months (maybe a year?) I learned about Linux and attempted my first dual-boot - Ubuntu 08.04. I printed out the installation instructions on a few sheets of lined 3-hole-punch notebook paper I happened to have lying around so I had all the commands I would need and set to work. Of course I was hooked, and from that point on it was a rare point in time for me to not at least be dual-booting with Linux, more often than not it was my primary OS and Windows was just there in case I needed it to run a specific program.</p>
+        <p>Enter the Thinkpad - When I started college in 2010, my school had a laptop program. You purchased a laptop from the school that had a 4 year warranty and came with all the software you would need pre-installed. As an Engineering student this worked out to be quite worthwhile, especially because by then my little Dell Inspiron was starting to struggle with newer programs. So that August I got my first Thinkpad - a Lenovo T410. The original specs included a 256GB HDD, 4GB RAM, and a first-gen Intel i5 processor.</p>
+        <br>
+        <h2>The T410 Era</h2>
+        <h2>Tech Dumps: Return of the Thinkpad</h2>
+
 keyboards: https://sharktastica.co.uk/
 
 https://hackaday.com/tag/diy-laptop/
@@ -7,3 +46,7 @@ https://hackaday.com/2024/04/01/pinkpad-a-diy-laptop-you-must-print-in-pink/
 https://github.com/thedalles77/USB_Laptop_Keyboard_Controller 
 https://oshpark.com/shared_projects/3l395XbG
 https://github.com/az4521/Pinkpad_Keyboard_Controller
+        </div>
+    </div>
+</body>
+</html>
