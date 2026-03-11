@@ -113,6 +113,14 @@ header {
     font-size: 14px;
 }
 
+.indent-list {
+    list-style-type: bullet; /* Removes bullets/numbers */
+    margin: 0;            /* Removes default margins */
+    padding: 40px;           /* Removes default padding (indentation) */
+    text-align: left;
+    font-size: 14px;
+}
+
 .sidebar {
     width: 80%;
     height: auto;
