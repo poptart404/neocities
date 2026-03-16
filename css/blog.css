@@ -62,18 +62,6 @@ a:active {
     clear: both;
 }
 
-
-/* Background Color */
-body {
-  background: #1f0037;
-  background: linear-gradient(0deg,rgb(46, 12, 34) 0%, rgb(50, 29, 69) 50%, rgb(18, 21, 60) 100%);
-  color: var(--text-color);
-  min-height: 100vh;
-  overflow-x: hidden;
-  position: relative;
-  cursor: url("/cursor/nyan.cur"), auto !important;
-}
-
 aside {
     width: 30%;
     padding-left: 15px;
@@ -86,6 +74,20 @@ aside {
     background-color: #ff167b98;
     box-shadow: 3px 3px 2px 0px rgb(9, 187, 214);
 }
+
+
+/* Background Color */
+body {
+  background: #1f0037;
+  background: linear-gradient(0deg,rgb(46, 12, 34) 0%, rgb(50, 29, 69) 50%, rgb(18, 21, 60) 100%);
+  color: var(--text-color);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  cursor: url("/cursor/nyan.cur"), auto !important;
+}
+
+
 
 /* Header Styles */
 header {
