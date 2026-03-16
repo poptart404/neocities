@@ -65,7 +65,10 @@ a:active {
 aside {
     width: 30%;
     padding: 10px;
-    margin: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 0px;
+    margin-bottom: 15px;
     text-align: center;
     float: right;
     clear: right;
