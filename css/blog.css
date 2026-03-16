@@ -82,6 +82,7 @@ aside {
     float: right;
     font-style: italic;
     background-color: #ff167b98;
+    box-shadow: 3px 3px 2px 0px rgb(9, 187, 214);
 }
 
 /* Header Styles */
