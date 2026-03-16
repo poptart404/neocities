@@ -64,8 +64,8 @@ a:active {
 
 aside {
     width: 30%;
-    padding-left: 15px;
-    margin-left: 15px;
+    padding: 15px;
+    margin: 15px;
     text-align: center;
     float: right;
     clear: right;
@@ -74,6 +74,7 @@ aside {
     background-color: #ff167b98;
     box-shadow: 3px 3px 2px 0px rgb(9, 187, 214);
     font-size:12px
+    overflow-wrap: break-word;
 }
 
 
