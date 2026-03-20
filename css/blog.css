@@ -137,7 +137,7 @@ header {
 .indent-list {
     list-style-type: bullet; /* Removes bullets/numbers */
     margin: 0;            /* Removes default margins */
-    padding: 40px;           /* Removes default padding (indentation) */
+    padding: 10px;           /* Removes default padding (indentation) */
     text-align: left;
     font-size: 14px;
 }
