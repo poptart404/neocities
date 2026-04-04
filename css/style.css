@@ -11,6 +11,24 @@
     --grid-color: rgba(0, 200, 255, 0.1);
     --text-color: #ffffff;
     /* --gradient-bg: linear-gradient(to bottom, rgb(52, 132, 154), rgb(52, 14, 94)), */
+    
+    /* Unvisited Link */
+    a:link {
+        color: #c4e0ff;
+    }
+    /* Visited Link */
+    a:visited {
+        color: #f678ff;
+    }
+    /* Mouse Over Link */
+    a:hover {
+        color: #ffb2e0;
+        text-decoration: underline;
+    }
+    /* Click on Link */
+    a:active {
+        color: #ffffff;
+    }
 }
 
 /* Base Styles */
@@ -355,4 +373,19 @@ footer {
     75% {
         transform: translateY(-15px) rotate(3deg);
     }
+}
+
+#statuscafe {
+    padding: .5em;
+    background-color: #440051;
+    border: 1px solid rgba(0, 200, 255, 0.1);
+    box-shadow: 3px 3px 2px 0px rgb(9, 187, 214);
+    background-color: #ff167b98;
+    border: 1px solid rgb(255, 0, 111);
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
 }
