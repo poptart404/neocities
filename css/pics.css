@@ -1,0 +1,218 @@
+/***
+EZ Gallery by netfriend - https://netfriend.neocities.org/ez-gallery/
+Released under the Unlicense - https://unlicense.org/
+***/
+
+.ezgallery.montage { 
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.ezgallery.montage img {
+  flex: auto;
+  margin: 0 5px 5px 0;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.ezgallery.horizontal { 
+  display: grid;
+  grid-gap: 5px;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.ezgallery.horizontal a {
+  text-align: center;
+}
+
+.ezgallery.horizontal img {
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 5px 5px 0;
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+/* CSS Variables for easy color customization */
+:root {
+    --neon-pink: #ff6ec7;
+    --neon-purple: #8a2be2;
+    --neon-blue: #00bfff;
+    --dark-bg: #1d1d45;
+    --grid-color: rgba(0, 200, 255, 0.1);
+    --text-color: #ffffff;
+    /* --gradient-bg: linear-gradient(to bottom, rgb(52, 132, 154), rgb(52, 14, 94)), */
+}
+
+/* unvisited link */
+a:link {
+  color: rgb(53, 228, 255);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(53, 228, 255);
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Configure 3 Columns */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.left {
+    width: 20%
+}
+
+.main {
+    width: 80%
+}
+
+/* Clear floats after the columns*/
+.row:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+aside {
+    width: 30%;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    text-align: left;
+    float: right;
+    clear: right;
+    min-width: 100px;
+    font-style: italic;
+    background-color: #ff167b98;
+    box-shadow: 3px 3px 2px 0px rgb(9, 187, 214);
+    font-size:12px
+    overflow-wrap: break-word;
+}
+
+
+/* Background Color */
+body {
+  background: #1f0037;
+  background: linear-gradient(0deg,rgb(46, 12, 34) 0%, rgb(50, 29, 69) 50%, rgb(18, 21, 60) 100%);
+  color: var(--text-color);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  cursor: url("/cursor/nyan.cur"), auto !important;
+  font-size: 14px;
+}
+
+
+
+/* Header Styles */
+header {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 200, 255, 0.3);
+}
+
+.content-heading {
+    text-align: center;
+}
+
+.content-text {
+    text-align: left;
+}
+
+.side-heading {
+    text-align: center;
+    font-size: 18px;
+}
+
+.side-heading2 {
+    text-align: center;
+    font-size: 16px;
+}
+
+.side-text {
+    text-align: left;
+    font-size: 14px;
+}
+
+.no-bullets {
+    list-style-type: none; /* Removes bullets/numbers */
+    margin: 0;            /* Removes default margins */
+    padding: 0;           /* Removes default padding (indentation) */
+    text-align: left;
+    font-size: 14px;
+}
+
+.indent-list {
+    list-style-type: bullet; /* Removes bullets/numbers */
+    margin: 0;            /* Removes default margins */
+    padding: 10px;           /* Removes default padding (indentation) */
+    text-align: left;
+    font-size: 14px;
+}
+
+.sidebar {
+    width: 80%;
+    height: auto;
+    /* align: center; */
+    border: 1px solid rgb(255, 0, 111);
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 3px 3px 2px 0px rgb(9, 187, 214);
+    background-color: #ff167b98;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    /* margin-bottom: 30px; */
+    text-align: center;
+}
+
+.site-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 
+        0 0 5px var(--neon-blue),
+        0 0 10px var(--neon-blue),
+        0 0 15px var(--neon-blue),
+        0 0 20px var(--neon-purple);
+}
+
+@keyframes title-glow {
+    0% { text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 15px var(--neon-blue), 0 0 20px var(--neon-purple); }
+    100% { text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue), 0 0 40px var(--neon-purple); }
+}
