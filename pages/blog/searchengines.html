@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, <initial-scale=1.0">
+    <title>Poptart's Blog</title>
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="icon" type="image/x-icon" href="/image/bajablast.png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="site-title">Poptart's Blog</h1>
+    </header>
+    <div class="row">
+        <div class="column left">
+            <div class="sidebar">
+                <div id="include-here"></div>
+
+                <script>
+                fetch('sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('include-here').innerHTML = data;
+                });
+                </script>
+            </div>
+        </div>
+        <div class="column main">
+             <h1>Search Engines</h1>
+             <p>With popular search engines becoming increasing bloated with ads and providing less useful results, below is my list of search engines that may or may not be more useful. This field is evolving quickly and I cannot promise the list will be consistently up to date, but may spark some ideas for alternatives.</p><br><br>
+             <p>Understanding search operators is also immensely helpful - for anything from large research projects to more day to day queries.</p><br><br>
+             <h2>The Big Ones</h2>
+             <p>
+                <li>Google - The most ubiquitous, unfortunately not nearly as good as it once was.</li>
+                <li>Bing - An alternative, though I haven't been overly pleased with it.</li>
+                <li>Yahoo - I haven't used it in years, but it is still out there.</li>
+             </p><br>
+             <h2>Meta Search Engines (search engines that use multiple search engines to put together results)</h2>
+             <p>
+                <li>Dogpile - Using this more lately, I've been impressed with the results. While there are ads, the lack of AI is refreshing.</li>
+                <li>SearXNG - A self-hosted option! I haven't tried it out yet, but have heard good things.</li>
+             </p><br>
+            <h2>Research-Focused</h2>
+            <p>
+                More to come here!
+            </p><br>
+        </div>
+    </div>
+</body>        
+</html>

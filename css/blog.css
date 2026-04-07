@@ -11,26 +11,24 @@
     --grid-color: rgba(0, 200, 255, 0.1);
     --text-color: #ffffff;
     /* --gradient-bg: linear-gradient(to bottom, rgb(52, 132, 154), rgb(52, 14, 94)), */
-}
-
-/* unvisited link */
-a:link {
-  color: rgb(53, 228, 255);
-}
-
-/* visited link */
-a:visited {
-  color: rgb(53, 228, 255);
-}
-
-/* mouse over link */
-a:hover {
-  color: hotpink;
-}
-
-/* selected link */
-a:active {
-  color: blue;
+    
+    /* Unvisited Link */
+    a:link {
+        color: #c4e0ff;
+    }
+    /* Visited Link */
+    a:visited {
+        color: #f678ff;
+    }
+    /* Mouse Over Link */
+    a:hover {
+        color: #ffb2e0;
+        text-decoration: underline;
+    }
+    /* Click on Link */
+    a:active {
+        color: #ffffff;
+    }
 }
 
 /* Base Styles */
@@ -76,7 +74,7 @@ aside {
     font-style: italic;
     background-color: #ff167b98;
     box-shadow: 3px 3px 2px 0px rgb(9, 187, 214);
-    font-size:12px
+    font-size:12px;
     overflow-wrap: break-word;
 }
 
@@ -90,10 +88,24 @@ body {
   overflow-x: hidden;
   position: relative;
   cursor: url("/cursor/nyan.cur"), auto !important;
-  font-size: 14px;
+  /* font-size: 14px; */
 }
 
-
+/* Background Elements */
+.grid-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(rgba(0, 200, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 200, 255, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px; 
+    z-index: -1;
+    perspective: 500px;
+    transform-style: preserve-3d;
+}
 
 /* Header Styles */
 header {
@@ -103,11 +115,32 @@ header {
     border-bottom: 1px solid rgba(0, 200, 255, 0.3);
 }
 
+.site-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 
+        0 0 5px var(--neon-blue),
+        0 0 10px var(--neon-blue),
+        0 0 15px var(--neon-blue),
+        0 0 20px var(--neon-purple);
+}
+
+@keyframes title-glow {
+    0% { text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 15px var(--neon-blue), 0 0 20px var(--neon-purple); }
+    100% { text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue), 0 0 40px var(--neon-purple); }
+}
+
+/* Main Content Styles */
 .content-heading {
     text-align: center;
 }
 
 .content-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
     text-align: left;
 }
 
@@ -156,21 +189,4 @@ header {
     line-height: 1.6;
     /* margin-bottom: 30px; */
     text-align: center;
-}
-
-.site-title {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 
-        0 0 5px var(--neon-blue),
-        0 0 10px var(--neon-blue),
-        0 0 15px var(--neon-blue),
-        0 0 20px var(--neon-purple);
-}
-
-@keyframes title-glow {
-    0% { text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 15px var(--neon-blue), 0 0 20px var(--neon-purple); }
-    100% { text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue), 0 0 40px var(--neon-purple); }
 }
